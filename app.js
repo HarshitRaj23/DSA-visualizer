@@ -27,7 +27,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Connect to MongoDB
-mongoose.connect("mongodb+srv://Admin-Neural-Brainiacs:Test12345@cluster0.8moz4.mongodb.net/userDB");
+mongoose.connect("mongodb+srv://Admin-Neural-Brainiacs:Test12345@cluster0.8moz4.mongodb.net/userDBDSA");
 
 // Define schema and model
 const userSchema = new mongoose.Schema({
