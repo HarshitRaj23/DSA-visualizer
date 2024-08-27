@@ -1,0 +1,702 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  font-size: 120%;
+  background: #F8F8FF;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header Styles */
+header {
+  background-color: #343a40;
+  padding: 10px 0;
+}
+
+header .navbar-brand {
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #adb5bd;
+}
+
+/* Custom adjustments to remove padding and margins from the navbar */
+header .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+header .navbar {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+header .navbar-nav {
+  margin-left: auto;
+}
+
+header .navbar-brand {
+  margin-right: auto;
+}
+
+header .navbar-toggler {
+  margin-left: auto;
+}
+
+/* Hero Section Styles */
+#hero {
+  background: url("/images/herbackgroungimg.jpg") no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Overlay with semi-transparent black */
+  z-index: 1;
+}
+
+#hero .container {
+  position: relative;
+  padding: 105px 0 180px 0;
+  z-index: 2;
+}
+
+#hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add text shadow for better readability */
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin: 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#hero a.btn-primary {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border-radius: 25px;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#hero a.btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Introduction Section Styles */
+#introduction {
+  padding: 60px 0;
+  background-color: #e2bbe9; /* Updated background color */
+}
+
+.video-container {
+  position: relative;
+  width: 80%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  margin: 0 auto;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#introduction p {
+  font-size: 1.125rem; /* Larger text for better readability */
+}
+
+.introduction-h2 {
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+#introduction h2 {
+  font-size: 2.5rem; /* Large heading */
+  color: #343a40; /* Dark color for better contrast */
+  font-weight: bold; /* Bold for emphasis */
+}
+
+/* Key Features Section Styles */
+#features {
+  background-color: #cae6b2; /* Updated background color */
+  padding: 50px 0 150px 0;
+}
+
+.fea {
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+}
+
+.feature-box {
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer; /* Change cursor to pointer (hand symbol) */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+  height: 250px; /* Fixed height to make all feature boxes the same size */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #333; /* Ensure text color is set here */
+}
+
+/* Ensuring text color does not change on hover */
+.feature-box h3 {
+  margin-bottom: 20px;
+}
+
+.feature-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-box ul li {
+  margin-bottom: 10px;
+}
+
+.feature-box:hover {
+  background-color: #e0e0e0; /* Change background color on hover */
+  transform: scale(1.05); /* Slightly scale up the feature box on hover */
+  color: #333; /* Keep text color consistent on hover */
+}
+
+/* Remove underline from links inside feature boxes */
+.feature-link {
+  text-decoration: none;
+  color: inherit; /* Ensure text color is inherited from feature-box */
+}
+
+.feature-link:hover {
+  text-decoration: none;
+}
+
+/* Ensuring links inside feature boxes don’t get underlined */
+.feature-box a {
+  text-decoration: none;
+  color: inherit; /* Ensure text color is inherited from feature-box */
+}
+
+.feature-box a:hover {
+  text-decoration: none;
+}
+
+/* Full Width Container for Testimonials */
+.full-width-container {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.full-width-container .container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: none;
+}
+
+/* Full Width Container for Testimonials */
+.full-width-container {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.full-width-container .container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: none;
+}
+
+/* Testimonials Section Styles */
+.ext-testimonial {
+  background-color: #e9ecec; /* Uniform background color for consistency */
+  padding: 50px 0; /* More padding for a spacious look */
+  text-align: center;
+  position: relative; /* Position relative for overlay effect */
+  overflow: hidden; /* Ensures no overflow */
+}
+
+.ext-testimonial::before {
+  content: ""; /* Removed gradient for a single color background */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e9ecec; /* Matching background color */
+  z-index: 0;
+}
+
+.user-test {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  padding: 0 20px; /* Padding for better spacing */
+  color: #333; /* Dark text for contrast */
+  position: relative;
+  z-index: 1;
+}
+
+.carousel-inner {
+  background: #d7f0e8; /* White background for the carousel items */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  overflow: hidden; /* Ensures no overflow */
+  position: relative; /* Position relative for animation effect */
+  z-index: 1;
+}
+
+.carousel-item {
+  padding: 60px; /* Reduced padding to make content fit better */
+  color: #333; /* Text color consistent with section text */
+  animation: fadeIn 2s ease-in-out; /* Animation for fading in */
+}
+
+.carousel-item p {
+  font-size: 1.125rem; /* Adjusted font size */
+  line-height: 1.6;
+  margin: 0;
+}
+
+.carousel-item p:first-child {
+  font-style: italic; /* Italicized testimonial text */
+  font-weight: 400;
+}
+
+.carousel-item p:last-child {
+  font-weight: 600;
+  margin-top: 20px; /* Reduced margin for better spacing */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%; /* Narrower controls */
+  color: #007bff; /* Primary color for controls */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.2); /* Subtle background color */
+  border-radius: 50%;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  color: #0056b3; /* Darker color on hover */
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+  font-size: 1.5rem; /* Larger icons */
+}
+
+/* Keyframes for Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .carousel-item {
+    padding: 15px; /* Less padding on smaller screens */
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 10%; /* Wider controls on smaller screens */
+  }
+}
+
+
+
+
+/* Footer Styles */
+footer {
+  background-color: #343a40;
+  color: #fff;
+  padding: 10px 0;
+}
+
+footer .social-media a {
+  color: #fff;
+  margin: 0 10px;
+}
+
+footer .social-media a:hover {
+  color: #007bff;
+}
+
+/* Teams Section Styles */
+#teams .team-member {
+  text-align: center;
+}
+
+#teams .team-member img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+#teams .team-member h3 {
+  margin-top: 10px;
+}
+
+#teams .team-member p {
+  color: #666;
+}
+
+#teams .team-member a {
+  display: block;
+  margin: 5px 0;
+}
+
+.team {
+  margin-bottom: 5%;
+}
+
+/* Chatbot Display */
+#bp-webchat {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+}
+
+/* Make the chatbot feature box clickable */
+#chatbotFeature {
+  cursor: pointer;
+}
+
+/* Form and Content Styling */
+form, .content {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #B0C4DE;
+  background: white;
+  border-radius: 10px;
+}
+
+/* Input Group Styling */
+.input-group {
+  margin: 10px 0;
+}
+
+.input-group label {
+  display: block;
+  text-align: left;
+  margin: 3px;
+}
+
+.input-group input {
+  height: 30px;
+  width: calc(100% - 20px); /* Adjust for padding */
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+/* Button Styling */
+.btn {
+  padding: 10px;
+  font-size: 15px;
+  color: white;
+  background: #5F9EA0;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Error and Success Messages Styling */
+.error {
+  width: 92%;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #a94442;
+  color: #a94442;
+  background: #f2dede;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.success {
+  color: #3c763d;
+  background: #dff0d8;
+  border: 1px solid #3c763d;
+  margin-bottom: 20px;
+}
+
+/* Specific Class for Centered Heading and Form */
+.text-center {
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: 2rem; /* Spacing between heading and form */
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.lead {
+  margin: 73px;
+}
+
+.bottom {
+  margin-bottom: 45px;
+}
+
+#newsletter {
+  padding: 60px 0;
+}
+
+/* Add padding and hover effects for team images */
+.img-container {
+  padding: 15px; /* Adjust the padding as needed */
+  border-radius: 10px; /* Optional: rounds the corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  position: relative; /* Necessary for the pseudo-element positioning */
+}
+
+.team-image {
+  display: block;
+  width: 100%;
+  height: auto; /* Ensures the image scales correctly */
+  border-radius: 10px; /* Rounds the corners */
+}
+
+.team-item:hover .img-container {
+  transform: scale(1.05); /* Slightly enlarges the image on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow effect */
+}
+
+.team-item {
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.team-item:hover {
+  transform: translateY(-10px); /* Slightly lifts the team item on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow effect */
+}
+
+/* Ensure the links inside feature boxes don't change the appearance */
+.feature-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Ensure text color is inherited from feature-box */
+}
+
+.feature-link:hover .feature-box {
+  /* Add hover effect if needed */
+  background-color: #e0e0e0; /* Example hover background color */
+  transform: scale(1.05); /* Example hover scale effect */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+/* Chatbot Popup Styles */
+#chatbot-popup {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #fff;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+.chatbot-icon {
+  font-size: 30px;
+  color: #007bff;
+  margin-right: 10px;
+}
+
+.chatbot-text {
+  font-size: 18px;
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Different animation keyframes */
+@keyframes popupAnimation1 {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes popupAnimation2 {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes popupAnimation3 {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes popupAnimation4 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popupAnimation5 {
+  from {
+    transform: rotate(-20deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* Animation classes */
+.popupAnimation1 {
+  animation: popupAnimation1 0.5s ease-in-out;
+}
+
+.popupAnimation2 {
+  animation: popupAnimation2 0.5s ease-in-out;
+}
+
+.popupAnimation3 {
+  animation: popupAnimation3 0.5s ease-in-out;
+}
+
+.popupAnimation4 {
+  animation: popupAnimation4 0.5s ease-in-out;
+}
+
+.popupAnimation5 {
+  animation: popupAnimation5 0.5s ease-in-out;
+}
+
+/* About Page Styles */
+/* General Styling for Boxes */
+.about-feature-box {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: default;
+  transition: background-color 0.3s, transform 0.3s;
+  height: 350px; /* Fixed height for uniformity */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures content is spaced evenly */
+  color: #333;
+}
+
+/* Box Header Styling */
+.about-feature-box h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem; /* Adjust size for readability */
+  font-weight: bold;
+}
+
+/* List Styling Inside Boxes */
+.about-feature-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto; /* Adds scroll if content overflows */
+}
+
+.about-feature-box ul li {
+  margin-bottom: 10px;
+  font-size: 1rem; /* Ensure list items are readable */
+}
+
+/* Hover Effects */
+.about-feature-box:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.03); /* Slightly smaller scale effect */
+  color: #333;
+}
