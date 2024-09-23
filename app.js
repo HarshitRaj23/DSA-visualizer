@@ -79,7 +79,7 @@ app.get("/teams", function(req, res) {
     if (req.isAuthenticated()) {
         res.render("teams");
     } else {
-        res.redirect("/teams");
+        res.redirect("/login");
     }
 });
 
@@ -88,7 +88,7 @@ app.get("/logout", function(req, res) {
         if (err) {
             console.log(err);
         }
-        res.redirect("/");
+        res.redirect("/home");
     });
 });
 
@@ -122,6 +122,10 @@ app.post("/login", function(req, res) {
     });
 });
 
+app.get("/visualize", (req, res) => {
+    res.render("visual"); 
+    
+});
 
 app.listen(process.env.PORT || 3000 , function() {
     console.log("Server started on port 3000.");

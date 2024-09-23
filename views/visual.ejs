@@ -1,0 +1,98 @@
+<%- include('partials/header') %>
+
+    <div class="container">
+        <!-- Main Menu with algorithm categories -->
+        <div class="menu">
+            <h1>Algorithm Visualizer</h1>
+            <!-- Buttons to navigate to different categories -->
+            <button onclick="showSection('sorting-options')">Sorting Algorithms</button>
+            <button onclick="showSection('searching-options')">Searching Algorithms</button>
+            <button onclick="showSection('graph-options')">Graph Algorithms</button>
+            <button onclick="showSection('dp-options')">Dynamic Programming Algorithms</button>
+            <button onclick="showSection('misc-options')">Miscellaneous Algorithms</button>
+        </div>
+
+        <!-- Sorting Options, hidden initially -->
+        <div id="sorting-options" class="hidden">
+            <h2>Sorting Algorithms</h2>
+            <button onclick="showVisualization('bubble-sort')">Bubble Sort</button>
+            <button onclick="showVisualization('selection-sort')">Selection Sort</button>
+            <button onclick="showVisualization('insertion-sort')">Insertion Sort</button>
+            <button onclick="showVisualization('merge-sort')">Merge Sort</button>
+            <button onclick="showVisualization('quick-sort')">Quick Sort</button>
+            <button onclick="showVisualization('heap-sort')">Heap Sort</button>
+            <button onclick="showVisualization('radix-sort')">Radix Sort</button>
+            <button onclick="showVisualization('bucket-sort')">Bucket Sort</button>
+            <button onclick="showVisualization('counting-sort')">Counting Sort</button>
+        </div>
+
+        <!-- Searching Options, hidden initially -->
+        <div id="searching-options" class="hidden">
+            <h2>Searching Algorithms</h2>
+            <button onclick="showVisualization('linear-search')">Linear Search</button>
+            <button onclick="showVisualization('binary-search')">Binary Search</button>
+            <button onclick="showVisualization('jump-search')">Jump Search</button>
+            <button onclick="showVisualization('exponential-search')">Exponential Search</button>
+            <button onclick="showVisualization('interpolation-search')">Interpolation Search</button>
+        </div>
+
+        <!-- Graph Algorithms Options, hidden initially -->
+        <div id="graph-options" class="hidden">
+            <h2>Graph Algorithms</h2>
+            <button onclick="showVisualization('dfs')">Depth-First Search (DFS)</button>
+            <button onclick="showVisualization('bfs')">Breadth-First Search (BFS)</button>
+            <button onclick="showVisualization('dijkstra')">Dijkstra’s Algorithm</button>
+            <button onclick="showVisualization('bellman-ford')">Bellman-Ford Algorithm</button>
+            <button onclick="showVisualization('floyd-warshall')">Floyd-Warshall Algorithm</button>
+            <button onclick="showVisualization('a-star')">A* Algorithm</button>
+            <button onclick="showVisualization('kruskal')">Kruskal’s Algorithm</button>
+            <button onclick="showVisualization('prim')">Prim’s Algorithm</button>
+            <button onclick="showVisualization('topological-sort')">Topological Sort</button>
+            <button onclick="showVisualization('tarjan')">Tarjan’s Algorithm</button>
+            <button onclick="showVisualization('kahn')">Kahn’s Algorithm</button>
+            <button onclick="showVisualization('hamiltonian-path')">Hamiltonian Path/Cycle</button>
+        </div>
+
+        <!-- Dynamic Programming Options, hidden initially -->
+        <div id="dp-options" class="hidden">
+            <h2>Dynamic Programming Algorithms</h2>
+            <button onclick="showVisualization('fibonacci')">Fibonacci Sequence</button>
+            <button onclick="showVisualization('knapsack')">Knapsack Problem</button>
+            <button onclick="showVisualization('lcs')">Longest Common Subsequence</button>
+            <button onclick="showVisualization('lis')">Longest Increasing Subsequence</button>
+            <button onclick="showVisualization('edit-distance')">Edit Distance</button>
+            <button onclick="showVisualization('matrix-chain')">Matrix Chain Multiplication</button>
+        </div>
+
+        <!-- Miscellaneous Algorithms Options, hidden initially -->
+        <div id="misc-options" class="hidden">
+            <h2>Miscellaneous Algorithms</h2>
+            <button onclick="showVisualization('union-find')">Union-Find (Disjoint Set)</button>
+            <button onclick="showVisualization('reservoir-sampling')">Reservoir Sampling</button>
+            <button onclick="showVisualization('kmp')">Knuth-Morris-Pratt (KMP)</button>
+            <button onclick="showVisualization('boyer-moore')">Boyer-Moore</button>
+        </div>
+
+        <!-- Visualization Section -->
+        <div id="visualization-section" class="hidden">
+            <!-- Visualization content will be dynamically inserted here -->
+            <!-- Add this HTML to your visualization section -->
+            <input type="text" id="array-input" placeholder="Enter numbers separated by commas">
+
+            <!-- Add sort order selection -->
+            <select id="sort-order">
+                <option value="ascending">Ascending</option>
+                <option value="descending">Descending</option>
+            </select>
+
+            <button onclick="startVisualization()">Start Visualization</button>
+
+        </div>
+    </div>
+
+    <!-- Link to D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Link to your JavaScript file -->
+    <script src="app.js"></script>
+
+    <%- include('partials/footer') %>
