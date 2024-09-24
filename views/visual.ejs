@@ -1,15 +1,24 @@
-<%- include('partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Visualizer</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
     <div class="container">
         <!-- Main Menu with algorithm categories -->
         <div class="menu">
             <h1>Algorithm Visualizer</h1>
             <!-- Buttons to navigate to different categories -->
-            <button onclick="showSection('sorting-options')">Sorting Algorithms</button>
-            <button onclick="showSection('searching-options')">Searching Algorithms</button>
-            <button onclick="showSection('graph-options')">Graph Algorithms</button>
-            <button onclick="showSection('dp-options')">Dynamic Programming Algorithms</button>
-            <button onclick="showSection('misc-options')">Miscellaneous Algorithms</button>
+            <button data-section="sorting-options">Sorting Algorithms</button>
+            <button data-section="searching-options">Searching Algorithms</button>
+            <button data-section="graph-options">Graph Algorithms</button>
+            <button data-section="dp-options">Dynamic Programming Algorithms</button>
+            <button data-section="misc-options">Miscellaneous Algorithms</button>
         </div>
 
         <!-- Sorting Options, hidden initially -->
@@ -73,26 +82,20 @@
             <button onclick="showVisualization('boyer-moore')">Boyer-Moore</button>
         </div>
 
+
         <!-- Visualization Section -->
         <div id="visualization-section" class="hidden">
             <!-- Visualization content will be dynamically inserted here -->
-            <!-- Add this HTML to your visualization section -->
-            <input type="text" id="array-input" placeholder="Enter numbers separated by commas">
-
-            <!-- Add sort order selection -->
-            <select id="sort-order">
-                <option value="ascending">Ascending</option>
-                <option value="descending">Descending</option>
-            </select>
-
-            <button onclick="startVisualization()">Start Visualization</button>
-
+            <iframe width="560" height="315" src="{youtubeLink}" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
+
+
 
     <!-- Link to D3.js -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <!-- Link to your JavaScript file -->
-    <script src="app.js"></script>
+    <script src="/js/script.js"></script>
+</body>
 
-    <%- include('partials/footer') %>
+</html>

@@ -897,3 +897,14 @@ h2 {
   min-height: 300px;
   /* Minimum height for visualization */
 }
+
+#iframe-container {
+  max-width: 400px;
+}
+#visualization-section {
+  padding: 20px;
+}
+
+#algorithm-details {
+  margin-top: 20px;
+}
