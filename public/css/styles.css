@@ -898,13 +898,34 @@ h2 {
   /* Minimum height for visualization */
 }
 
-#iframe-container {
-  max-width: 400px;
+.hidden {
+  display: none;
 }
-#visualization-section {
+.algorithm-container {
+  background-color: #fff;
   padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-#algorithm-details {
-  margin-top: 20px;
+.algorithm-container h2 {
+  margin-top: 0;
 }
+
+
+
+pre {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+iframe {
+  border-radius: 8px; /* Rounded corners */
+  margin-top: 15px; /* Space above the iframe */
+}
+
+
+

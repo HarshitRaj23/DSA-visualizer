@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Algorithm Visualizer</title>
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
-
-<body>
+<%- include('partials/header') %>
     <div class="container">
         <!-- Main Menu with algorithm categories -->
         <div class="menu">
@@ -86,8 +76,10 @@
         <!-- Visualization Section -->
         <div id="visualization-section" class="hidden">
             <!-- Visualization content will be dynamically inserted here -->
-            <iframe width="560" height="315" src="{youtubeLink}" frameborder="0" allowfullscreen></iframe>
         </div>
+
+        <div id="algorithm-details" class="hidden"></div>
+
     </div>
 
 
@@ -96,6 +88,5 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <!-- Link to your JavaScript file -->
     <script src="/js/script.js"></script>
-</body>
 
-</html>
+    <%- include('partials/footer') %>
