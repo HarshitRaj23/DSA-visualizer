@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Setting up session and passport
 app.use(session({
-    secret:"our little secret.",
+    secret: "our little secret.", // Be sure to use a strong secret string
     resave: false,
     saveUninitialized: false
 }));
@@ -29,7 +29,8 @@ app.use(passport.session());
 // Connect to MongoDB
 mongoose.connect("mongodb+srv://Admin-Neural-Brainiacs:Test12345@cluster0.8moz4.mongodb.net/userDBDSA");
 
-// Define schema and model
+
+// Define schema and model for User and Visitor
 const userSchema = new mongoose.Schema({
     username: String,
     password: String
@@ -39,27 +40,59 @@ userSchema.plugin(passportLocalMongoose);
 
 const User = mongoose.model("User", userSchema);
 
+const visitorSchema = new mongoose.Schema({
+    count: { type: Number, default: 0 }
+});
+
+const Visitor = mongoose.model("Visitor", visitorSchema);
+
 // Passport configuration
 passport.use(User.createStrategy());
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
+
+passport.serializeUser(function(user, done) {
+    done(null, user.id);
+});
+
+passport.deserializeUser(function(id, done) {
+    User.findById(id, function(err, user) {
+        done(err, user);
+    });
+});
 
 // Routes
-app.get("/", function(req, res) {
-    res.render("index");
+app.get("/", async (req, res) => {
+    try {
+        const visitor = await Visitor.findOne({});
+        if (!visitor) {
+            // If no visitor count exists, create a new one
+            const newVisitor = new Visitor({ count: 1 });
+            await newVisitor.save();
+            res.render("index", { visitorCount: 1 });
+        } else {
+            // Increment visitor count and update in the database
+            visitor.count += 1;
+            await visitor.save();
+            res.render("index", { visitorCount: visitor.count });
+        }
+    } catch (err) {
+        console.log(err);
+        res.render("index", { visitorCount: 0 }); // Render with 0 if there's an error
+    }
 });
-app.get("/welcome", function(req, res) {
+
+app.get("/welcome", (req, res) => {
     res.render("welcome");
 });
-app.get("/login", function(req, res) {
+
+app.get("/login", (req, res) => {
     res.render("login");
 });
 
-app.get("/register", function(req, res) {
+app.get("/register", (req, res) => {
     res.render("register");
 });
 
-app.get("/home", function(req, res) {
+app.get("/home", (req, res) => {
     if (req.isAuthenticated()) {
         res.render("home");
     } else {
@@ -67,7 +100,7 @@ app.get("/home", function(req, res) {
     }
 });
 
-app.get("/about", function(req, res) {
+app.get("/about", (req, res) => {
     if (req.isAuthenticated()) {
         res.render("about");
     } else {
@@ -75,7 +108,7 @@ app.get("/about", function(req, res) {
     }
 });
 
-app.get("/teams", function(req, res) {
+app.get("/teams", (req, res) => {
     if (req.isAuthenticated()) {
         res.render("teams");
     } else {
@@ -83,51 +116,52 @@ app.get("/teams", function(req, res) {
     }
 });
 
-app.get("/logout", function(req, res) {
-    req.logout(function(err) {
+app.get("/logout", (req, res) => {
+    req.logout((err) => {
         if (err) {
             console.log(err);
         }
-        res.redirect("/home");
+        res.redirect("/");
     });
 });
 
-app.post("/register", function(req, res) {
-    User.register({ username: req.body.username }, req.body.password, function(err, user) {
+app.post("/register", (req, res) => {
+    User.register({ username: req.body.username }, req.body.password, (err, user) => {
         if (err) {
             console.log(err);
             res.redirect("/register");
         } else {
-            passport.authenticate("local")(req, res, function() {
+            passport.authenticate("local")(req, res, () => {
                 res.redirect("/home");
             });
         }
     });
 });
 
-app.post("/login", function(req, res) {
+app.post("/login", (req, res) => {
     const user = new User({
         username: req.body.username,
         password: req.body.password
     });
-    req.login(user, function(err) {
+
+    req.login(user, (err) => {
         if (err) {
             console.log(err);
             res.redirect("/login");
         } else {
-            passport.authenticate("local")(req, res, function() {
+            passport.authenticate("local")(req, res, () => {
                 res.redirect("/home");
             });
         }
     });
 });
 
+// Visualization route
 app.get("/visualize", (req, res) => {
     res.render("visual");
-    
 });
 
-
-app.listen(process.env.PORT || 3000 , function() {
+// Server setup
+app.listen(process.env.PORT || 3000, function() {
     console.log("Server started on port 3000.");
 });

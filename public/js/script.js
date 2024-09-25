@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return arr;
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=nmhjrI-aW5o'
+            youtube: 'https://www.youtube.com/watch?v=HGk_ypEuS24'
         },
         'selection-sort': {
             description: 'Selection sort repeatedly finds the minimum element from the unsorted part of the array and places it at the beginning.',
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return arr;
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=g-PGLbMth_g'
+            youtube: 'https://www.youtube.com/watch?v=HGk_ypEuS24'
         },
         'insertion-sort': {
             description: 'Insertion sort is a simple sorting algorithm that builds a sorted array one element at a time by repeatedly taking the next element from the unsorted part and inserting it into the correct position in the sorted part.',
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return arr;
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=ROalU379l4A'
+            youtube: 'https://www.youtube.com/watch?v=HGk_ypEuS24'
         },
         'merge-sort': {
             description: 'Merge sort is a divide-and-conquer algorithm that divides the array into halves, sorts each half, and then merges them back together. It is efficient for large datasets.',
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return result.concat(left.slice(i)).concat(right.slice(j));
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=4Y6n61e2X_8'
+            youtube: 'https://www.youtube.com/watch?v=ogjf7ORKfd8'
         },
         'quick-sort': {
             description: 'Quick sort is a highly efficient sorting algorithm that uses a divide-and-conquer strategy to select a "pivot" element, partition the array around the pivot, and recursively sort the partitions.',
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return [...quickSort(left), pivot, ...quickSort(right)];
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=Pg_9H8L8m7A'
+            youtube: 'https://www.youtube.com/watch?v=WIrA4YexLRQ'
         },
         'heap-sort': {
             description: 'Heap sort is a comparison-based sorting algorithm that uses a binary heap data structure. It first builds a max heap from the input array, then repeatedly extracts the maximum element from the heap and rebuilds the heap until sorted.',
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         heapify(arr, n, largest);
                     }
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=YzNj1ZQ0pHs'
+            youtube: 'https://www.youtube.com/watch?v=UVW0NfG_YWA'
         },
         'radix-sort': {
             description: 'Radix sort is a non-comparison-based sorting algorithm that sorts numbers by processing individual digits. It works by distributing the numbers into buckets based on their digits and sorting them iteratively.',
@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return arr;
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=KZB1z9jXKkU'
+            youtube: 'https://www.youtube.com/watch?v=6du1LrLbDpA'
         },
         'bucket-sort': {
             description: 'Bucket sort distributes the elements of an array into a number of buckets. Each bucket is then sorted individually, either using a different sorting algorithm or recursively applying the bucket sort.',
@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         return sorted.concat(bucket.sort((a, b) => a - b));
                     }, []);
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=huoY5nMTXtE'
+            youtube: 'https://www.youtube.com/watch?v=7mahJ1axrR8'
         },
         'counting-sort': {
             description: 'Counting sort is a non-comparison-based sorting algorithm that works by counting the occurrences of each unique element in the input array and then calculating the positions of each element in the sorted output.',
@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return output;
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=9I6I1A3aY58'
+            youtube: 'https://www.youtube.com/watch?v=imqr13aIBAY'
         },
         'linear-search': {
             description: 'Linear search is a simple searching algorithm that checks each element of the array sequentially until the desired element is found or the end of the array is reached.',
@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return -1; // Target not found
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=3oOtoL_3yzg'
+            youtube: 'https://www.youtube.com/watch?v=C46QfTjVCNU'
         },
         'binary-search': {
             description: 'Binary search is a highly efficient algorithm for finding an item from a sorted list of items. It works by repeatedly dividing the portion of the list that could contain the item in half until you narrow down the possible locations to just one.',
@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return -1; // Target not found
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=P3YID7liBug'
+            youtube: 'https://www.youtube.com/watch?v=MHf6awe89xw'
         },
 
         'jump-search': {
@@ -278,7 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return arr[prev] === target ? prev : -1; // Return the index of the target element
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=U8B1P_Uh0sM'
+            youtube: 'https://www.youtube.com/watch?v=Va2UraOqeHQ'
         },
         'exponential-search': {
             description: 'Exponential search is a searching algorithm that finds the range where the target element may be present and then uses binary search on that range. It is particularly useful for unbounded or infinite lists.',
@@ -293,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     return binarySearch(arr.slice(i / 2, Math.min(i, arr.length)), target); // Use binary search in the identified range
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=3VuyD9v8W2s'
+            youtube: 'https://www.youtube.com/watch?v=PaGRX7llaWU'
         },
         'interpolation-search': {
             description: 'Interpolation search is an improved variant of binary search that works on the principle of predicting the position of the target element based on the value of the element. It performs better for uniformly distributed arrays.',
@@ -321,7 +321,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return -1; // Target not found
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=xRAt3WoeHhI'
+            youtube: 'https://www.youtube.com/watch?v=iMVKo1vXVsw'
         },
         'dfs': {
             description: 'Depth-First Search (DFS) is an algorithm for traversing or searching tree or graph data structures. It starts at the root (or an arbitrary node) and explores as far as possible along each branch before backtracking.',
@@ -336,7 +336,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     }
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=9vKqVkx_3nQ'
+            youtube: 'https://www.youtube.com/watch?v=Qzf1a--rhp8'
         },
         'bfs': {
             description: 'Breadth-First Search (BFS) is an algorithm for traversing or searching tree or graph data structures. It starts at the root (or an arbitrary node) and explores all of the neighbor nodes at the present depth before moving on to nodes at the next depth level.',
@@ -358,7 +358,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     }
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=YbZ4C6mI1oY'
+            youtube: 'https://www.youtube.com/watch?v=-tgVpUgsQ5k'
         },
         'dijkstra': {
             description: 'Dijkstra’s Algorithm is a graph search algorithm that solves the single-source shortest path problem for a graph with non-negative edge weights. It finds the shortest path from a starting node to all other nodes in the graph.',
@@ -390,7 +390,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return distances; // Return the shortest distances from the start node
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=TZb2E0p1Yds'
+            youtube: 'https://www.youtube.com/watch?v=V6H1qAeB-l4'
         },
         'bellman-ford': {
             description: 'The Bellman-Ford Algorithm is a graph search algorithm that finds the shortest path from a single source node to all other nodes in a graph, allowing for negative weight edges.',
@@ -415,7 +415,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return distances; // Return the shortest distances from the start node
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=Vn8s7g6r3w4'
+            youtube: 'https://www.youtube.com/watch?v=0vVofAhAYjc'
         },
         'floyd-warshall': {
             description: 'The Floyd-Warshall Algorithm is a dynamic programming algorithm used to find the shortest paths in a weighted graph with positive or negative edge weights (but with no negative cycles).',
@@ -434,7 +434,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return dist; // Return the matrix of shortest distances
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=2uQ8fH5sbH8'
+            youtube: 'https://www.youtube.com/watch?v=YbY8cVwWAvw'
         },
         'a-star': {
             description: 'The A* (A-star) Algorithm is a popular pathfinding and graph traversal algorithm that is used to find the shortest path from a start node to a target node while considering the cost and heuristic distance.',
@@ -472,7 +472,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return []; // Return an empty path if no path exists
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=2D7P_5bD5_w'
+            youtube: 'https://www.youtube.com/watch?v=PzEWHH2v3TE'
         },
         'kruskal': {
             description: 'Kruskal’s Algorithm is a minimum spanning tree algorithm that finds an edge set that connects all vertices in a graph while minimizing the total edge weight.',
@@ -494,7 +494,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return mst; // Return the edges of the minimum spanning tree
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=EML1WJtSzkE'
+            youtube: 'https://www.youtube.com/watch?v=DMnDM_sxVig'
         },
         'prim': {
             description: 'Prim’s Algorithm is another minimum spanning tree algorithm that builds the MST one vertex at a time, starting from an arbitrary vertex and expanding to the nearest unconnected vertex.',
@@ -524,7 +524,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return mst; // Return the edges of the minimum spanning tree
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=JnI3j4F5Lq8'
+            youtube: 'https://www.youtube.com/watch?v=mJcZjjKzeqk'
         },
         'topological-sort': {
             description: 'Topological Sort is a linear ordering of vertices in a directed acyclic graph (DAG) such that for every directed edge u -> v, vertex u comes before v in the ordering.',
@@ -548,7 +548,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return result.reverse(); // Return the reverse order
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=1zQ2G0P72nI'
+            youtube: 'https://www.youtube.com/watch?v=5lZ0iJMrUMk'
         },
         'tarjan': {
             description: 'Tarjan’s Algorithm is used to find the strongly connected components (SCCs) in a directed graph. It performs a depth-first search and maintains indices and low-link values to find the components.',
@@ -594,7 +594,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return sccs; // Return the strongly connected components
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=ZzH6g3TS6A0'
+            youtube: 'https://www.youtube.com/watch?v=qrAub5z8FeA'
         },
         'kahn': {
             description: 'Kahn’s Algorithm is used for topological sorting of a directed acyclic graph (DAG) using in-degree (number of incoming edges) of vertices.',
@@ -633,7 +633,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return result; // Return the topological order
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=V92z6HqIDr4'
+            youtube: 'https://www.youtube.com/watch?v=73sneFXuTEg'
         },
         'hamiltonian-path': {
             description: 'The Hamiltonian Path/Cycle Problem involves finding a path in a graph that visits each vertex exactly once. If the path ends at the starting vertex, it is called a Hamiltonian Cycle. This problem is NP-complete, meaning there is no known efficient solution for all graphs.',
@@ -673,7 +673,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return []; // Return empty if no path found
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=UeT70mqux5I'
+            youtube: 'https://www.youtube.com/watch?v=dQr4wZCiJJ4'
         },
         'fibonacci': {
             description: 'The Fibonacci Sequence is a series of numbers where each number is the sum of the two preceding ones, starting from 0 and 1. This algorithm can be solved using dynamic programming to avoid redundant calculations.',
@@ -686,7 +686,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return fib[n];
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=5oY2oE1LJZA'
+            youtube: 'https://www.youtube.com/watch?v=YkBch12jNE0'
         },
         'knapsack': {
             description: 'The Knapsack Problem is a classic optimization problem where the goal is to maximize the total value of items placed in a knapsack without exceeding its weight capacity. This implementation uses dynamic programming to find the optimal solution.',
@@ -706,7 +706,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return dp[n][capacity];
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=4m2G3J5d4wM'
+            youtube: 'https://www.youtube.com/watch?v=GqOmJHQZivw'
         },
         'lcs': {
             description: 'The Longest Common Subsequence (LCS) problem seeks to find the longest subsequence that is common to two sequences. This dynamic programming approach builds a matrix to track lengths of common subsequences.',
@@ -726,27 +726,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return dp[m][n];
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=8E2Xk2Yz_Gg'
-        },
-        'lcs': {
-            description: 'The Longest Common Subsequence (LCS) problem seeks to find the longest subsequence that is common to two sequences. This dynamic programming approach builds a matrix to track lengths of common subsequences.',
-            code: `
-                function lcs(x, y) {
-                    const m = x.length, n = y.length;
-                    const dp = Array(m + 1).fill().map(() => Array(n + 1).fill(0));
-
-                    for (let i = 1; i <= m; i++) {
-                        for (let j = 1; j <= n; j++) {
-                            if (x[i - 1] === y[j - 1]) {
-                                dp[i][j] = dp[i - 1][j - 1] + 1;
-                            } else {
-                                dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
-                            }
-                        }
-                    }
-                    return dp[m][n];
-                }`,
-            youtube: 'https://www.youtube.com/watch?v=8E2Xk2Yz_Gg'
+            youtube: 'https://www.youtube.com/watch?v=NPZn9jBrX8U'
         },
         'lis': {
             description: 'The Longest Increasing Subsequence (LIS) problem finds the longest subsequence of a given sequence in which the elements are in sorted order. This dynamic programming solution has a time complexity of O(n^2).',
@@ -764,7 +744,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return Math.max(...dp);
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=wec4jH1Afx8'
+            youtube: 'https://www.youtube.com/watch?v=ekcwMsSIzVc'
         },
         'edit-distance': {
             description: 'The Edit Distance (Levenshtein distance) problem measures the minimum number of edits (insertions, deletions, substitutions) required to transform one string into another. This dynamic programming approach builds a matrix to calculate the distance.',
@@ -788,7 +768,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return dp[m][n];
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=8QkQ1L6QQ9s'
+            youtube: 'https://www.youtube.com/watch?v=fJaKO8FbDdo'
         },
         'matrix-chain': {
             description: 'The Matrix Chain Multiplication problem aims to determine the most efficient way to multiply a given sequence of matrices. This dynamic programming solution minimizes the total number of scalar multiplications.',
@@ -812,7 +792,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return dp[0][n - 1]; // Return minimum cost
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=Z5KgN3l7D0U'
+            youtube: 'https://www.youtube.com/watch?v=vRVfmbCFW7Y'
         },
         'union-find': {
             description: 'The Union-Find (Disjoint Set) data structure is used to keep track of a partition of a set into disjoint subsets. It supports two primary operations: union (joining two subsets) and find (finding the subset a particular element belongs to).',
@@ -846,7 +826,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     }
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=9mM5m30KpC8'
+            youtube: 'https://www.youtube.com/watch?v=aBxjDBC4M1U'
         },
         'reservoir-sampling': {
             description: 'Reservoir Sampling is a randomized algorithm for selecting a simple random sample of `k` items from a list of `n` items, where `n` is either a very large or unknown number. It ensures that each item has an equal probability of being selected.',
@@ -866,7 +846,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     return reservoir;
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=5-JpQ8w4n9k'
+            youtube: 'https://www.youtube.com/watch?v=r_Wxym8Q5TY'
         },
         'kmp': {
             description: 'The Knuth-Morris-Pratt (KMP) algorithm is a string matching algorithm that searches for occurrences of a pattern within a text string in linear time. It uses a preprocessing phase to create a partial match table (also known as the "prefix table") to skip unnecessary comparisons.',
@@ -918,7 +898,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     }
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=GTJr8OvyEVc'
+            youtube: 'https://www.youtube.com/watch?v=lhhqbGH7Pao'
         },
         'boyer-moore': {
             description: 'The Boyer-Moore algorithm is a highly efficient string searching algorithm that skips sections of the text based on mismatched characters. It utilizes pre-processing to create two tables: the bad character table and the good suffix table.',
@@ -948,7 +928,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     }
                 }`,
-            youtube: 'https://www.youtube.com/watch?v=K-q4E7Zp7E0'
+            youtube: 'https://www.youtube.com/watch?v=4Xyhb72LCX4'
         }
         // Add similar details for other algorithms (insertion-sort, quick-sort, merge-sort, etc.)
     };

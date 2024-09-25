@@ -927,5 +927,60 @@ iframe {
   margin-top: 15px; /* Space above the iframe */
 }
 
+/* Styles for the visitor counter section */
+/* Styles for the visitor counter section */
+/* Styles for the visitor counter section with gradient background */
+#visitor-counter {
+    background: linear-gradient(to right, #b1dfeb, #8f94fb); /* Gradient background */
+    padding: 50px 0; /* Vertical padding */
+    margin-top: 30px; /* Space above the section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    color: #ffffff; /* Text color for contrast */
+}
 
 
+#visitor-counter .container {
+    max-width: 800px; /* Max width for larger screens */
+    margin: auto; /* Center the container */
+}
+
+#visitor-counter h2 {
+    font-size: 2.5rem; /* Larger font size for the heading */
+    color: #333; /* Darker color for text */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+#visitor-counter p {
+    font-size: 1.5rem; /* Medium font size for the paragraph */
+    color: #555; /* Slightly lighter color */
+}
+
+.visitor-count {
+    font-weight: bold; /* Bold the visitor count */
+    color: #007bff; /* Bootstrap primary color */
+    font-size: 1.8rem; /* Slightly larger font size */
+}
+
+
+#visitor-counter .container {
+  max-width: 800px; /* Max width for larger screens */
+  margin: auto; /* Center the container */
+}
+
+#visitor-counter h2 {
+  font-size: 2.5rem; /* Larger font size for the heading */
+  color: #333; /* Darker color for text */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+#visitor-counter p {
+  font-size: 1.5rem; /* Medium font size for the paragraph */
+  color: #555; /* Slightly lighter color */
+}
+
+.visitor-count {
+  font-weight: bold; /* Bold the visitor count */
+  color: #007bff; /* Bootstrap primary color */
+  font-size: 1.8rem; /* Slightly larger font size */
+}
