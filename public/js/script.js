@@ -1010,207 +1010,205 @@ document.addEventListener('DOMContentLoaded', () => {
         const visualizationSection = document.getElementById('visualization-section');
         visualizationSection.innerHTML = "<p>Start Visualization has been triggered! Processing your input...</p>";
 
-        if (array.length > 0) {
-            visualizationSection.innerHTML += "<p>Valid array received. Proceeding with visualization...</p>";
-            visualizationSection.innerHTML += `<p>Array: [${array.join(', ')}]</p>`;
+        setTimeout(() => {
+            if (array.length > 0) {
+                visualizationSection.innerHTML += "<p>Valid array received. Proceeding with visualization...</p>";
+                visualizationSection.innerHTML += `<p>Array: [${array.join(', ')}]</p>`;
 
-            // Call the appropriate visualization function based on the selected algorithm
-            switch (selectedAlgorithm) {
-                // Sorting Algorithms
-                case 'bubble-sort':
-                    visualizeBubbleSort(array, sortOrder);
-                    break;
-                case 'selection-sort':
-                    visualizeSelectionSort(array, sortOrder);
-                    break;
-                case 'insertion-sort':
-                    visualizeInsertionSort(array, sortOrder);
-                    break;
-                case 'quick-sort':
-                    visualizeQuickSort(array, sortOrder);
-                    break;
-                case 'merge-sort':
-                    visualizeMergeSort(array, sortOrder);
-                    break;
-                case 'heap-sort':
-                    visualizeHeapSort(array, sortOrder);
-                    break;
-                case 'radix-sort':
-                    visualizeRadixSort(array, sortOrder);
-                    break;
-                case 'bucket-sort':
-                    visualizeBucketSort(array, sortOrder);
-                    break;
-                case 'counting-sort':
-                    visualizeCountingSort(array, sortOrder);
-                    break;
-                // Searching Algorithms
-                case 'linear-search':
-                    visualizeLinearSearch(array, searchValue);
-                    break;
-                case 'binary-search':
-                    visualizeBinarySearch(array, searchValue);
-                    break;
-                case 'jump-search':
-                    visualizeJumpSearch(array, searchValue);
-                    break;
-                case 'exponential-search':
-                    visualizeExponentialSearch(array, searchValue);
-                    break;
-                case 'interpolation-search':
-                    visualizeInterpolationSearch(array, searchValue);
-                    break;
-                // Graph Algorithms
-                case 'dfs':
-                    visualizeDFS(graph);
-                    break;
-                case 'bfs':
-                    visualizeBFS(graph);
-                    break;
-                case 'dijkstra':
-                    visualizeDijkstra(graph, startNode);
-                    break;
-                case 'bellman-ford':
-                    visualizeBellmanFord(graph, startNode);
-                    break;
-                case 'floyd-warshall':
-                    visualizeFloydWarshall(graph);
-                    break;
-                case 'a-star':
-                    visualizeAStar(graph, startNode, endNode);
-                    break;
-                case 'kruskal':
-                    visualizeKruskal(graph);
-                    break;
-                case 'prim':
-                    visualizePrim(graph);
-                    break;
-                case 'topological-sort':
-                    visualizeTopologicalSort(graph);
-                    break;
-                case 'tarjan':
-                    visualizeTarjan(graph);
-                    break;
-                case 'kahn':
-                    visualizeKahn(graph);
-                    break;
-                case 'hamiltonian-path':
-                    visualizeHamiltonianPath(graph);
-                    break;
-                // Dynamic Programming Algorithms
-                case 'fibonacci':
-                    visualizeFibonacci(n);
-                    break;
-                case 'knapsack':
-                    visualizeKnapsack(weights, values, capacity);
-                    break;
-                case 'lcs':
-                    visualizeLCS(string1, string2);
-                    break;
-                case 'lis':
-                    visualizeLIS(array);
-                    break;
-                case 'edit-distance':
-                    visualizeEditDistance(string1, string2);
-                    break;
-                case 'matrix-chain':
-                    visualizeMatrixChain(dimensions);
-                    break;
-                // Miscellaneous Algorithms
-                case 'union-find':
-                    visualizeUnionFind(sets);
-                    break;
-                case 'reservoir-sampling':
-                    visualizeReservoirSampling(array);
-                    break;
-                case 'kmp':
-                    visualizeKMP(text, pattern);
-                    break;
-                case 'boyer-moore':
-                    visualizeBoyerMoore(text, pattern);
-                    break;
-                default:
-                    alert("Please select a valid algorithm.");
-                    break;
+                // Call the appropriate visualization function based on the selected algorithm
+                switch (selectedAlgorithm) {
+                    // Sorting Algorithms
+                    case 'bubble-sort':
+                        visualizeBubbleSort(array, sortOrder);
+                        break;
+                    case 'selection-sort':
+                        visualizeSelectionSort(array, sortOrder);
+                        break;
+                    case 'insertion-sort':
+                        visualizeInsertionSort(array, sortOrder);
+                        break;
+                    case 'quick-sort':
+                        visualizeQuickSort(array, sortOrder);
+                        break;
+                    case 'merge-sort':
+                        visualizeMergeSort(array, sortOrder);
+                        break;
+                    case 'heap-sort':
+                        visualizeHeapSort(array, sortOrder);
+                        break;
+                    case 'radix-sort':
+                        visualizeRadixSort(array, sortOrder);
+                        break;
+                    case 'bucket-sort':
+                        visualizeBucketSort(array, sortOrder);
+                        break;
+                    case 'counting-sort':
+                        visualizeCountingSort(array, sortOrder);
+                        break;
+                    // Searching Algorithms
+                    case 'linear-search':
+                        visualizeLinearSearch(array, searchValue);
+                        break;
+                    case 'binary-search':
+                        visualizeBinarySearch(array, searchValue);
+                        break;
+                    case 'jump-search':
+                        visualizeJumpSearch(array, searchValue);
+                        break;
+                    case 'exponential-search':
+                        visualizeExponentialSearch(array, searchValue);
+                        break;
+                    case 'interpolation-search':
+                        visualizeInterpolationSearch(array, searchValue);
+                        break;
+                    // Graph Algorithms
+                    case 'dfs':
+                        visualizeDFS(graph);
+                        break;
+                    case 'bfs':
+                        visualizeBFS(graph);
+                        break;
+                    case 'dijkstra':
+                        visualizeDijkstra(graph, startNode);
+                        break;
+                    case 'bellman-ford':
+                        visualizeBellmanFord(graph, startNode);
+                        break;
+                    case 'floyd-warshall':
+                        visualizeFloydWarshall(graph);
+                        break;
+                    case 'a-star':
+                        visualizeAStar(graph, startNode, endNode);
+                        break;
+                    case 'kruskal':
+                        visualizeKruskal(graph);
+                        break;
+                    case 'prim':
+                        visualizePrim(graph);
+                        break;
+                    case 'topological-sort':
+                        visualizeTopologicalSort(graph);
+                        break;
+                    case 'tarjan':
+                        visualizeTarjan(graph);
+                        break;
+                    case 'kahn':
+                        visualizeKahn(graph);
+                        break;
+                    case 'hamiltonian-path':
+                        visualizeHamiltonianPath(graph);
+                        break;
+                    // Dynamic Programming Algorithms
+                    case 'fibonacci':
+                        visualizeFibonacci(n);
+                        break;
+                    case 'knapsack':
+                        visualizeKnapsack(weights, values, capacity);
+                        break;
+                    case 'lcs':
+                        visualizeLCS(string1, string2);
+                        break;
+                    case 'lis':
+                        visualizeLIS(array);
+                        break;
+                    case 'edit-distance':
+                        visualizeEditDistance(string1, string2);
+                        break;
+                    case 'matrix-chain':
+                        visualizeMatrixChain(dimensions);
+                        break;
+                    // Miscellaneous Algorithms
+                    case 'union-find':
+                        visualizeUnionFind(sets);
+                        break;
+                    case 'reservoir-sampling':
+                        visualizeReservoirSampling(array);
+                        break;
+                    case 'kmp':
+                        visualizeKMP(text, pattern);
+                        break;
+                    case 'boyer-moore':
+                        visualizeBoyerMoore(text, pattern);
+                        break;
+                    default:
+                        alert("Please select a valid algorithm.");
+                        break;
+                }
+            } else {
+                alert("Please enter a valid array of numbers.");
             }
-        } else {
-            alert("Please enter a valid array of numbers.");
-        }
+        }, 1000); // Show the valid array message after a 1 second delay
     };
 
-     // Function to visualize Bubble Sort
-     function visualizeBubbleSort(array, sortOrder) {
+    function visualizeBubbleSort(array, sortOrder = 'ascending') {
         const width = 1000;
         const height = 500;
         const barWidth = width / array.length;
         const delayBetweenSteps = 1500;
-        const duration = 1500;
-
-        const svg = d3.select("#visualization-section").append("svg")
+        const duration = 1000;
+        
+        // Create the SVG canvas for visualization
+        const svg = d3.select("#visualization-section").html('')  // Clear any previous visualizations
+            .append("svg")
             .attr("width", width)
             .attr("height", height);
-
+    
+        const maxValue = Math.max(...array); // To avoid recalculating max in every step
+    
+        // Draw the initial bars
         const bars = svg.selectAll("rect")
             .data(array)
             .enter().append("rect")
             .attr("x", (d, i) => i * barWidth)
-            .attr("y", d => height - d * (height / Math.max(...array)))
+            .attr("y", d => height - d * (height / maxValue))  // Consistent height calculation
             .attr("width", barWidth - 1)
-            .attr("height", d => d * (height / Math.max(...array)))
+            .attr("height", d => d * (height / maxValue))  // Consistent height calculation
             .attr("fill", "steelblue");
-
-        svg.selectAll("text.index")
+    
+        // Create text labels for the bar values
+        const textLabels = svg.selectAll("text.value")
             .data(array)
             .enter().append("text")
-            .attr("class", "index")
+            .attr("class", "value")
             .attr("x", (d, i) => i * barWidth + barWidth / 2)
-            .attr("y", height - 5)
+            .attr("y", d => height - d * (height / maxValue) - 5)  // Consistent position calculation
             .attr("text-anchor", "middle")
             .attr("font-size", "12px")
             .attr("fill", "black")
-            .text((d, i) => i);
-
-        const xAxis = d3.axisBottom(d3.scaleLinear().domain([0, array.length]).range([0, width]));
-        const yAxis = d3.axisLeft(d3.scaleLinear().domain([0, Math.max(...array)]).range([height, 0]));
-
-        svg.append("g")
-            .attr("transform", `translate(0, ${height})`)
-            .call(xAxis);
-
-        svg.append("g")
-            .call(yAxis);
-
-        function updateBars(data, swapIndices) {
-            bars.data(data)
-                .transition()
-                .duration(duration)
-                .attr("y", d => height - d * (height / Math.max(...array)))
-                .attr("height", d => d * (height / Math.max(...array)))
-                .attr("fill", (d, i) => swapIndices.includes(i) ? "orange" : "steelblue");
-        }
-
+            .text(d => d);
+    
+        // Bubble sort algorithm with visualization
         function bubbleSort(array, order) {
-            let i, j;
             const n = array.length;
             let sortedArray = array.slice();
-
+            let i = 0, j = 0;
+    
             function step() {
-                let swapped = false;
-                for (i = 0; i < n - 1; i++) {
-                    const condition = order === 'ascending' ?
-                        sortedArray[i] > sortedArray[i + 1] :
-                        sortedArray[i] < sortedArray[i + 1];
-
-                    if (condition) {
-                        updateBars(sortedArray, [i, i + 1]);
-                        [sortedArray[i], sortedArray[i + 1]] = [sortedArray[i + 1], sortedArray[i]];
-                        swapped = true;
-
-                        setTimeout(() => updateBars(sortedArray, []), duration);
+                if (i < n - 1) {
+                    if (j < n - i - 1) {
+                        // Determine whether to swap based on sortOrder
+                        const condition = order === 'ascending'
+                            ? sortedArray[j] > sortedArray[j + 1]
+                            : sortedArray[j] < sortedArray[j + 1];
+    
+                        // Highlight the bars being compared (before swapping)
+                        updateBars(sortedArray, [j, j + 1], true);
+    
+                        if (condition) {
+                            // Swap the bars
+                            [sortedArray[j], sortedArray[j + 1]] = [sortedArray[j + 1], sortedArray[j]];
+    
+                            // Update bars with a transition effect after swapping
+                            setTimeout(() => updateBars(sortedArray, [j, j + 1], false), duration);
+                        }
+    
+                        j++;
+                        setTimeout(step, delayBetweenSteps);  // Proceed to the next comparison step
+                    } else {
+                        j = 0;
+                        i++;
+                        setTimeout(step, delayBetweenSteps);  // Move to the next pass of the algorithm
                     }
-                }
-                if (swapped) {
-                    setTimeout(step, delayBetweenSteps);
                 } else {
                     svg.append("text")
                         .attr("x", width / 2)
@@ -1221,87 +1219,106 @@ document.addEventListener('DOMContentLoaded', () => {
                         .text("Sorted!");
                 }
             }
-
-            step();
+    
+            step();  // Start the sorting steps
         }
-
+    
+        // Function to update the bars and text positions after each step
+        function updateBars(data, swapIndices, isComparing) {
+            bars.data(data)
+                .transition()
+                .duration(duration)
+                .attr("y", d => height - d * (height / maxValue))
+                .attr("height", d => d * (height / maxValue))
+                // Yellow for comparing, orange for swapping, steelblue for normal
+                .attr("fill", (d, i) => isComparing && swapIndices.includes(i) 
+                    ? "yellow" : swapIndices.includes(i) 
+                    ? "orange" : "steelblue");
+    
+            // Update the text labels to reflect the new values
+            textLabels.data(data)
+                .transition()
+                .duration(duration)
+                .attr("y", d => height - d * (height / maxValue) - 5)
+                .text(d => d);
+        }
+    
+        // Call the bubble sort with visualization
         bubbleSort(array, sortOrder);
-    }
+    }    
 
     // Function to visualize Selection Sort
-    function visualizeSelectionSort(array, sortOrder) {
+    function visualizeSelectionSort(array, sortOrder = 'ascending') {
         const width = 1000;
         const height = 500;
         const barWidth = width / array.length;
         const delayBetweenSteps = 1500;
-        const duration = 1500;
-
-        const svg = d3.select("#visualization-section").append("svg")
+        const duration = 1000;
+    
+        // Create the SVG canvas for visualization
+        const svg = d3.select("#visualization-section").html('')  // Clear any previous visualizations
+            .append("svg")
             .attr("width", width)
             .attr("height", height);
-
+    
+        const maxValue = Math.max(...array); // To avoid recalculating max in every step
+    
+        // Draw the initial bars
         const bars = svg.selectAll("rect")
             .data(array)
             .enter().append("rect")
             .attr("x", (d, i) => i * barWidth)
-            .attr("y", d => height - d * (height / Math.max(...array)))
+            .attr("y", d => height - d * (height / maxValue))  // Consistent height calculation
             .attr("width", barWidth - 1)
-            .attr("height", d => d * (height / Math.max(...array)))
+            .attr("height", d => d * (height / maxValue))  // Consistent height calculation
             .attr("fill", "steelblue");
-
-        svg.selectAll("text.index")
+    
+        // Create text labels for the bar values
+        const textLabels = svg.selectAll("text.value")
             .data(array)
             .enter().append("text")
-            .attr("class", "index")
+            .attr("class", "value")
             .attr("x", (d, i) => i * barWidth + barWidth / 2)
-            .attr("y", height - 5)
+            .attr("y", d => height - d * (height / maxValue) - 5)  // Consistent position calculation
             .attr("text-anchor", "middle")
             .attr("font-size", "12px")
             .attr("fill", "black")
-            .text((d, i) => i);
-
-        const xAxis = d3.axisBottom(d3.scaleLinear().domain([0, array.length]).range([0, width]));
-        const yAxis = d3.axisLeft(d3.scaleLinear().domain([0, Math.max(...array)]).range([height, 0]));
-
-        svg.append("g")
-            .attr("transform", `translate(0, ${height})`)
-            .call(xAxis);
-
-        svg.append("g")
-            .call(yAxis);
-
-        function updateBars(data, swapIndices) {
-            bars.data(data)
-                .transition()
-                .duration(duration)
-                .attr("y", d => height - d * (height / Math.max(...array)))
-                .attr("height", d => d * (height / Math.max(...array)))
-                .attr("fill", (d, i) => swapIndices.includes(i) ? "orange" : "steelblue");
-        }
-
+            .text(d => d);
+    
+        // Selection sort algorithm with visualization
         function selectionSort(array, order) {
             const n = array.length;
             let sortedArray = array.slice();
-
-            function step(i = 0) {
+            let i = 0;
+    
+            function step() {
                 if (i < n - 1) {
                     let minIndex = i;
+    
+                    // Find the minimum element's index in the remaining unsorted array
                     for (let j = i + 1; j < n; j++) {
-                        const condition = order === 'ascending' ?
-                            sortedArray[j] < sortedArray[minIndex] :
-                            sortedArray[j] > sortedArray[minIndex];
-
+                        // Determine whether to update the minimum index based on sortOrder
+                        const condition = order === 'ascending'
+                            ? sortedArray[j] < sortedArray[minIndex]
+                            : sortedArray[j] > sortedArray[minIndex];
+    
                         if (condition) {
                             minIndex = j;
                         }
                     }
+    
+                    // Highlight the bars being compared
+                    updateBars(sortedArray, [i, minIndex], true);
+    
                     // Swap the found minimum element with the first element
                     if (minIndex !== i) {
-                        updateBars(sortedArray, [i, minIndex]);
                         [sortedArray[i], sortedArray[minIndex]] = [sortedArray[minIndex], sortedArray[i]];
-                        setTimeout(() => updateBars(sortedArray, []), duration);
+                        // Update bars with a transition effect after swapping
+                        setTimeout(() => updateBars(sortedArray, [i, minIndex], false), duration);
                     }
-                    setTimeout(() => step(i + 1), delayBetweenSteps);
+    
+                    i++;
+                    setTimeout(step, delayBetweenSteps);  // Proceed to the next iteration
                 } else {
                     svg.append("text")
                         .attr("x", width / 2)
@@ -1312,87 +1329,108 @@ document.addEventListener('DOMContentLoaded', () => {
                         .text("Sorted!");
                 }
             }
-
-            step();
+    
+            step();  // Start the sorting steps
         }
-
+    
+        // Function to update the bars and text positions after each step
+        function updateBars(data, swapIndices, isComparing) {
+            bars.data(data)
+                .transition()
+                .duration(duration)
+                .attr("y", d => height - d * (height / maxValue))
+                .attr("height", d => d * (height / maxValue))
+                // Yellow for comparing, orange for swapping, steelblue for normal
+                .attr("fill", (d, i) => isComparing && swapIndices.includes(i) 
+                    ? "yellow" : swapIndices.includes(i) 
+                    ? "orange" : "steelblue");
+    
+            // Update the text labels to reflect the new values
+            textLabels.data(data)
+                .transition()
+                .duration(duration)
+                .attr("y", d => height - d * (height / maxValue) - 5)
+                .text(d => d);
+        }
+    
+        // Call the selection sort with visualization
         selectionSort(array, sortOrder);
     }
+    
 
     // Function to visualize Insertion Sort
-    function visualizeInsertionSort(array, sortOrder) {
+    function visualizeInsertionSort(array, sortOrder = 'ascending') {
         const width = 1000;
         const height = 500;
         const barWidth = width / array.length;
         const delayBetweenSteps = 1500;
-        const duration = 1500;
-
-        const svg = d3.select("#visualization-section").append("svg")
+        const duration = 1000;
+    
+        // Create the SVG canvas for visualization
+        const svg = d3.select("#visualization-section").html('')  // Clear any previous visualizations
+            .append("svg")
             .attr("width", width)
             .attr("height", height);
-
+    
+        const maxValue = Math.max(...array); // To avoid recalculating max in every step
+    
+        // Draw the initial bars using the array values as heights
         const bars = svg.selectAll("rect")
             .data(array)
             .enter().append("rect")
             .attr("x", (d, i) => i * barWidth)
-            .attr("y", d => height - d * (height / Math.max(...array)))
+            .attr("y", d => height - d * (height / maxValue))  // Set y position based on the value
             .attr("width", barWidth - 1)
-            .attr("height", d => d * (height / Math.max(...array)))
+            .attr("height", d => d * (height / maxValue))  // Set height based on the value
             .attr("fill", "steelblue");
-
-        svg.selectAll("text.index")
+    
+        // Create text labels for the bar values
+        const textLabels = svg.selectAll("text.value")
             .data(array)
             .enter().append("text")
-            .attr("class", "index")
+            .attr("class", "value")
             .attr("x", (d, i) => i * barWidth + barWidth / 2)
-            .attr("y", height - 5)
+            .attr("y", d => height - d * (height / maxValue) - 5)  // Set position based on the value
             .attr("text-anchor", "middle")
             .attr("font-size", "12px")
             .attr("fill", "black")
-            .text((d, i) => i);
-
-        const xAxis = d3.axisBottom(d3.scaleLinear().domain([0, array.length]).range([0, width]));
-        const yAxis = d3.axisLeft(d3.scaleLinear().domain([0, Math.max(...array)]).range([height, 0]));
-
-        svg.append("g")
-            .attr("transform", `translate(0, ${height})`)
-            .call(xAxis);
-
-        svg.append("g")
-            .call(yAxis);
-
-        function updateBars(data, highlightIndices) {
-            bars.data(data)
-                .transition()
-                .duration(duration)
-                .attr("y", d => height - d * (height / Math.max(...array)))
-                .attr("height", d => d * (height / Math.max(...array)))
-                .attr("fill", (d, i) => highlightIndices.includes(i) ? "orange" : "steelblue");
-        }
-
+            .text(d => d);
+    
+        // Insertion sort algorithm with visualization
         function insertionSort(array, order) {
             const n = array.length;
             let sortedArray = array.slice();
-
-            function step(i = 1) {
+    
+            function step(i) {
                 if (i < n) {
                     let key = sortedArray[i];
                     let j = i - 1;
-
-                    // Move elements that are greater than key to one position ahead of their current position
-                    while (j >= 0 && (order === 'ascending' ? sortedArray[j] > key : sortedArray[j] < key)) {
-                        updateBars(sortedArray, [j, j + 1]);
-                        sortedArray[j + 1] = sortedArray[j];
-                        j--;
-
-                        setTimeout(() => updateBars(sortedArray, []), duration);
+    
+                    // Move elements of sortedArray[0..i-1], that are greater than key, to one position ahead of their current position
+                    function innerStep() {
+                        if (j >= 0 && ((order === 'ascending' && sortedArray[j] > key) || (order === 'descending' && sortedArray[j] < key))) {
+                            // Highlight the bars being compared
+                            updateBars(sortedArray, [j, j + 1], true);
+    
+                            // Move the element to the right
+                            sortedArray[j + 1] = sortedArray[j];
+    
+                            // Update the bars after moving
+                            setTimeout(() => updateBars(sortedArray, [j, j + 1], false), duration);
+                            j--;
+                            setTimeout(innerStep, duration);  // Proceed to the next comparison step
+                        } else {
+                            sortedArray[j + 1] = key; // Place the key at the correct position
+    
+                            // Update bars with a transition effect after inserting
+                            setTimeout(() => {
+                                updateBars(sortedArray, [j + 1], false);
+                                setTimeout(() => step(i + 1), delayBetweenSteps);  // Move to the next iteration
+                            }, duration);
+                        }
                     }
-                    sortedArray[j + 1] = key;
-
-                    // Highlight the current key insertion position
-                    updateBars(sortedArray, [j + 1]);
-
-                    setTimeout(() => step(i + 1), delayBetweenSteps);
+    
+                    innerStep();  // Start the inner loop
                 } else {
                     svg.append("text")
                         .attr("x", width / 2)
@@ -1403,462 +1441,50 @@ document.addEventListener('DOMContentLoaded', () => {
                         .text("Sorted!");
                 }
             }
-
-            step();
+    
+            step(1);  // Start the sorting steps
         }
-
+    
+        // Function to update the bars and text positions after each step
+        function updateBars(data, swapIndices, isComparing) {
+            bars.data(data)
+                .transition()
+                .duration(duration)
+                .attr("y", d => height - d * (height / maxValue)) // Set y position based on the value
+                .attr("height", d => d * (height / maxValue))  // Set height based on the value
+                // Yellow for comparing, orange for moving, steelblue for normal
+                .attr("fill", (d, i) => isComparing && swapIndices.includes(i) 
+                    ? "yellow" : swapIndices.includes(i) 
+                    ? "orange" : "steelblue");
+    
+            // Update the text labels to reflect the new values
+            textLabels.data(data)
+                .transition()
+                .duration(duration)
+                .attr("y", d => height - d * (height / maxValue) - 5) // Set position based on the value
+                .text(d => d);
+        }
+    
+        // Call the insertion sort with visualization
         insertionSort(array, sortOrder);
     }
-
+    
     // Function to visualize Quick Sort
-    function visualizeQuickSort(array, sortOrder) {
-        const width = 1000;
-        const height = 500;
-        const barWidth = width / array.length;
-        const delayBetweenSteps = 1500;
-        const duration = 1500;
+    
+    
+    
 
-        const svg = d3.select("#visualization-section").append("svg")
-            .attr("width", width)
-            .attr("height", height);
-
-        const bars = svg.selectAll("rect")
-            .data(array)
-            .enter().append("rect")
-            .attr("x", (d, i) => i * barWidth)
-            .attr("y", d => height - d * (height / Math.max(...array)))
-            .attr("width", barWidth - 1)
-            .attr("height", d => d * (height / Math.max(...array)))
-            .attr("fill", "steelblue");
-
-        svg.selectAll("text.index")
-            .data(array)
-            .enter().append("text")
-            .attr("class", "index")
-            .attr("x", (d, i) => i * barWidth + barWidth / 2)
-            .attr("y", height - 5)
-            .attr("text-anchor", "middle")
-            .attr("font-size", "12px")
-            .attr("fill", "black")
-            .text((d, i) => i);
-
-        const xAxis = d3.axisBottom(d3.scaleLinear().domain([0, array.length]).range([0, width]));
-        const yAxis = d3.axisLeft(d3.scaleLinear().domain([0, Math.max(...array)]).range([height, 0]));
-
-        svg.append("g")
-            .attr("transform", `translate(0, ${height})`)
-            .call(xAxis);
-
-        svg.append("g")
-            .call(yAxis);
-
-        function updateBars(data, highlightIndices) {
-            bars.data(data)
-                .transition()
-                .duration(duration)
-                .attr("y", d => height - d * (height / Math.max(...array)))
-                .attr("height", d => d * (height / Math.max(...array)))
-                .attr("fill", (d, i) => highlightIndices.includes(i) ? "orange" : "steelblue");
-        }
-
-        function quickSort(array, left, right) {
-            if (left < right) {
-                const pivotIndex = partition(array, left, right);
-                updateBars(array, [pivotIndex]); // Highlight the pivot
-
-                setTimeout(() => {
-                    quickSort(array, left, pivotIndex - 1);
-                    quickSort(array, pivotIndex + 1, right);
-                }, delayBetweenSteps);
-            } else if (left === right) {
-                // Highlight the single element as sorted
-                updateBars(array, [left]);
-            }
-        }
-
-        function partition(array, left, right) {
-            const pivot = array[right];
-            let i = left - 1;
-
-            for (let j = left; j < right; j++) {
-                const condition = sortOrder === 'ascending' ? array[j] <= pivot : array[j] >= pivot;
-
-                if (condition) {
-                    i++;
-                    [array[i], array[j]] = [array[j], array[i]];
-                    updateBars(array, [i, j]); // Highlight the swap
-                    setTimeout(() => updateBars(array, []), duration);
-                }
-            }
-
-            // Place the pivot in the correct position
-            [array[i + 1], array[right]] = [array[right], array[i + 1]];
-            updateBars(array, [i + 1, right]); // Highlight the pivot position
-            setTimeout(() => updateBars(array, []), duration);
-
-            return i + 1;
-        }
-
-        quickSort(array.slice(), 0, array.length - 1);
-    }
-
-    // Function to visualize Merge Sort
-    function visualizeMergeSort(array, sortOrder) {
-        const width = 1000;
-        const height = 500;
-        const barWidth = width / array.length;
-        const delayBetweenSteps = 1500;
-        const duration = 1500;
-
-        const svg = d3.select("#visualization-section").append("svg")
-            .attr("width", width)
-            .attr("height", height);
-
-        const bars = svg.selectAll("rect")
-            .data(array)
-            .enter().append("rect")
-            .attr("x", (d, i) => i * barWidth)
-            .attr("y", d => height - d * (height / Math.max(...array)))
-            .attr("width", barWidth - 1)
-            .attr("height", d => d * (height / Math.max(...array)))
-            .attr("fill", "steelblue");
-
-        svg.selectAll("text.index")
-            .data(array)
-            .enter().append("text")
-            .attr("class", "index")
-            .attr("x", (d, i) => i * barWidth + barWidth / 2)
-            .attr("y", height - 5)
-            .attr("text-anchor", "middle")
-            .attr("font-size", "12px")
-            .attr("fill", "black")
-            .text((d, i) => i);
-
-        const xAxis = d3.axisBottom(d3.scaleLinear().domain([0, array.length]).range([0, width]));
-        const yAxis = d3.axisLeft(d3.scaleLinear().domain([0, Math.max(...array)]).range([height, 0]));
-
-        svg.append("g")
-            .attr("transform", `translate(0, ${height})`)
-            .call(xAxis);
-
-        svg.append("g")
-            .call(yAxis);
-
-        function updateBars(data, highlightIndices) {
-            bars.data(data)
-                .transition()
-                .duration(duration)
-                .attr("y", d => height - d * (height / Math.max(...array)))
-                .attr("height", d => d * (height / Math.max(...array)))
-                .attr("fill", (d, i) => highlightIndices.includes(i) ? "orange" : "steelblue");
-        }
-
-        function mergeSort(array) {
-            if (array.length <= 1) return array;
-
-            const mid = Math.floor(array.length / 2);
-            const left = array.slice(0, mid);
-            const right = array.slice(mid);
-
-            const sortedLeft = mergeSort(left);
-            const sortedRight = mergeSort(right);
-
-            return merge(sortedLeft, sortedRight);
-        }
-
-        function merge(left, right) {
-            const result = [];
-            let i = 0, j = 0;
-
-            while (i < left.length && j < right.length) {
-                const condition = sortOrder === 'ascending' ? left[i] <= right[j] : left[i] >= right[j];
-
-                if (condition) {
-                    result.push(left[i]);
-                    updateBars(array, [i + j]); // Highlight the current left index
-                    i++;
-                } else {
-                    result.push(right[j]);
-                    updateBars(array, [i + j]); // Highlight the current right index
-                    j++;
-                }
-            }
-
-            return result.concat(left.slice(i)).concat(right.slice(j));
-        }
-
-        const sortedArray = mergeSort(array.slice());
-        updateBars(sortedArray, []); // Final update with sorted array
-    }
+    // Function to visualize Merge Sort    
 
     // Function to visualize Heap Sort
-    function visualizeHeapSort(array, sortOrder) {
-        const width = 1000;
-        const height = 500;
-        const barWidth = width / array.length;
-        const delayBetweenSteps = 1500;
-        const duration = 1500;
-
-        const svg = d3.select("#visualization-section").append("svg")
-            .attr("width", width)
-            .attr("height", height);
-
-        const bars = svg.selectAll("rect")
-            .data(array)
-            .enter().append("rect")
-            .attr("x", (d, i) => i * barWidth)
-            .attr("y", d => height - d * (height / Math.max(...array)))
-            .attr("width", barWidth - 1)
-            .attr("height", d => d * (height / Math.max(...array)))
-            .attr("fill", "steelblue");
-
-        svg.selectAll("text.index")
-            .data(array)
-            .enter().append("text")
-            .attr("class", "index")
-            .attr("x", (d, i) => i * barWidth + barWidth / 2)
-            .attr("y", height - 5)
-            .attr("text-anchor", "middle")
-            .attr("font-size", "12px")
-            .attr("fill", "black")
-            .text((d, i) => i);
-
-        const xAxis = d3.axisBottom(d3.scaleLinear().domain([0, array.length]).range([0, width]));
-        const yAxis = d3.axisLeft(d3.scaleLinear().domain([0, Math.max(...array)]).range([height, 0]));
-
-        svg.append("g")
-            .attr("transform", `translate(0, ${height})`)
-            .call(xAxis);
-
-        svg.append("g")
-            .call(yAxis);
-
-        function updateBars(data, highlightIndices) {
-            bars.data(data)
-                .transition()
-                .duration(duration)
-                .attr("y", d => height - d * (height / Math.max(...array)))
-                .attr("height", d => d * (height / Math.max(...array)))
-                .attr("fill", (d, i) => highlightIndices.includes(i) ? "orange" : "steelblue");
-        }
-
-        function heapSort(array) {
-            const n = array.length;
-
-            // Build heap (rearrange array)
-            for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {
-                heapify(array, n, i);
-            }
-
-            // One by one extract an element from heap
-            for (let i = n - 1; i > 0; i--) {
-                // Move current root to end
-                [array[0], array[i]] = [array[i], array[0]];
-                updateBars(array, [0, i]); // Highlight the swap
-                setTimeout(() => updateBars(array, []), duration);
-                heapify(array, i, 0);
-            }
-        }
-
-        function heapify(array, n, i) {
-            let largest = i; // Initialize largest as root
-            const left = 2 * i + 1; // left = 2*i + 1
-            const right = 2 * i + 2; // right = 2*i + 2
-
-            // If left child is larger than root
-            if (left < n && array[left] > array[largest]) {
-                largest = left;
-            }
-
-            // If right child is larger than largest so far
-            if (right < n && array[right] > array[largest]) {
-                largest = right;
-            }
-
-            // If largest is not root
-            if (largest !== i) {
-                [array[i], array[largest]] = [array[largest], array[i]];
-                updateBars(array, [i, largest]); // Highlight the swap
-                setTimeout(() => updateBars(array, []), duration);
-
-                // Recursively heapify the affected sub-tree
-                heapify(array, n, largest);
-            }
-        }
-
-        heapSort(array.slice());
-    }
+   
     // Function to visualize Radix Sort
-    function visualizeRadixSort(array) {
-        const width = 1000;
-        const height = 500;
-        const barWidth = width / array.length;
-        const duration = 1500;
-
-        const svg = d3.select("#visualization-section").append("svg")
-            .attr("width", width)
-            .attr("height", height);
-
-        const bars = svg.selectAll("rect")
-            .data(array)
-            .enter().append("rect")
-            .attr("x", (d, i) => i * barWidth)
-            .attr("y", d => height - d * (height / Math.max(...array)))
-            .attr("width", barWidth - 1)
-            .attr("height", d => d * (height / Math.max(...array)))
-            .attr("fill", "steelblue");
-
-        function updateBars(data, highlightIndices) {
-            bars.data(data)
-                .transition()
-                .duration(duration)
-                .attr("y", d => height - d * (height / Math.max(...array)))
-                .attr("height", d => d * (height / Math.max(...array)))
-                .attr("fill", (d, i) => highlightIndices.includes(i) ? "orange" : "steelblue");
-        }
-
-        function radixSort(array) {
-            const max = Math.max(...array);
-            let digitPosition = 1;
-            while (Math.floor(max / digitPosition) > 0) {
-                array = countingSortByDigit(array, digitPosition);
-                digitPosition *= 10;
-            }
-            return array;
-        }
-
-        function countingSortByDigit(array, digitPosition) {
-            const output = new Array(array.length).fill(0);
-            const count = new Array(10).fill(0);
-
-            array.forEach(num => {
-                const digit = Math.floor(num / digitPosition) % 10;
-                count[digit]++;
-            });
-
-            for (let i = 1; i < 10; i++) {
-                count[i] += count[i - 1];
-            }
-
-            for (let i = array.length - 1; i >= 0; i--) {
-                const digit = Math.floor(array[i] / digitPosition) % 10;
-                output[count[digit] - 1] = array[i];
-                count[digit]--;
-            }
-
-            array.forEach((_, idx) => {
-                array[idx] = output[idx];
-            });
-
-            updateBars(array, []);
-            return array;
-        }
-
-        const sortedArray = radixSort(array.slice());
-        updateBars(sortedArray, []);
-    }
+    
+    
     // Function to visualize Bucket Sort
-    function visualizeBucketSort(array) {
-        const width = 1000;
-        const height = 500;
-        const barWidth = width / array.length;
-        const duration = 1500;
-
-        const svg = d3.select("#visualization-section").append("svg")
-            .attr("width", width)
-            .attr("height", height);
-
-        const bars = svg.selectAll("rect")
-            .data(array)
-            .enter().append("rect")
-            .attr("x", (d, i) => i * barWidth)
-            .attr("y", d => height - d * (height / Math.max(...array)))
-            .attr("width", barWidth - 1)
-            .attr("height", d => d * (height / Math.max(...array)))
-            .attr("fill", "steelblue");
-
-        function updateBars(data, highlightIndices) {
-            bars.data(data)
-                .transition()
-                .duration(duration)
-                .attr("y", d => height - d * (height / Math.max(...array)))
-                .attr("height", d => d * (height / Math.max(...array)))
-                .attr("fill", (d, i) => highlightIndices.includes(i) ? "orange" : "steelblue");
-        }
-
-        function bucketSort(array) {
-            const bucketCount = Math.ceil(Math.sqrt(array.length));
-            const max = Math.max(...array);
-            const buckets = Array.from({ length: bucketCount }, () => []);
-
-            array.forEach(num => {
-                const bucketIndex = Math.floor(num / max * (bucketCount - 1));
-                buckets[bucketIndex].push(num);
-            });
-
-            buckets.forEach(bucket => bucket.sort((a, b) => a - b));
-
-            let sortedArray = [];
-            buckets.forEach(bucket => sortedArray = sortedArray.concat(bucket));
-
-            updateBars(sortedArray, []);
-            return sortedArray;
-        }
-
-        const sortedArray = bucketSort(array.slice());
-        updateBars(sortedArray, []);
-    }
+    
     // Function to visualize Counting Sort
-    function visualizeCountingSort(array) {
-        const width = 1000;
-        const height = 500;
-        const barWidth = width / array.length;
-        const duration = 1500;
-
-        const svg = d3.select("#visualization-section").append("svg")
-            .attr("width", width)
-            .attr("height", height);
-
-        const bars = svg.selectAll("rect")
-            .data(array)
-            .enter().append("rect")
-            .attr("x", (d, i) => i * barWidth)
-            .attr("y", d => height - d * (height / Math.max(...array)))
-            .attr("width", barWidth - 1)
-            .attr("height", d => d * (height / Math.max(...array)))
-            .attr("fill", "steelblue");
-
-        function updateBars(data, highlightIndices) {
-            bars.data(data)
-                .transition()
-                .duration(duration)
-                .attr("y", d => height - d * (height / Math.max(...array)))
-                .attr("height", d => d * (height / Math.max(...array)))
-                .attr("fill", (d, i) => highlightIndices.includes(i) ? "orange" : "steelblue");
-        }
-
-        function countingSort(array) {
-            const max = Math.max(...array);
-            const count = new Array(max + 1).fill(0);
-
-            array.forEach(num => count[num]++);
-
-            for (let i = 1; i <= max; i++) {
-                count[i] += count[i - 1];
-            }
-
-            const output = new Array(array.length);
-            for (let i = array.length - 1; i >= 0; i--) {
-                output[--count[array[i]]] = array[i];
-            }
-
-            updateBars(output, []);
-            return output;
-        }
-
-        const sortedArray = countingSort(array.slice());
-        updateBars(sortedArray, []);
-    }
+    
 
     // Attach showSection to buttons
     document.querySelectorAll('button').forEach(button => {
