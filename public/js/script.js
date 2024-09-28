@@ -1483,7 +1483,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Function to visualize Bucket Sort
     
-    // Function to visualize Counting Sort
+    // Function to visualize Counting Sort 
     
 
     // Attach showSection to buttons
