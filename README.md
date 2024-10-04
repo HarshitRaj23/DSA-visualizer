@@ -52,7 +52,7 @@ To run this project, ensure that you have the following installed:
 ### Steps to Set Up
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/your-username/visual-algorithm-explorer.git](https://github.com/HarshitRaj23/DSA-visualizer.git)
+   git clone [https://github.com/your-username/visual-algorithm-explorer.git]
 
 2. Install the Dependencies
    ```bash
