@@ -3,12 +3,12 @@
 The **Visual Algorithm Explorer** is an interactive web platform that provides users with an intuitive and engaging way to explore various algorithms and data structures. By utilizing **HTML, CSS, JavaScript**, and **Python** for dynamic visual content, and implementing core algorithms in **Java**, this project simplifies complex topics through interactive visualization.
 
 ## Table of Contents
-
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation)
 - [Technologies Used](#technologies-used)
 - [Usage](#usage)
+- [Live Demo](#live-demo)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -78,6 +78,14 @@ Once the application is running, open your browser and go to: http://localhost:3
 - **Algorithm Visualization**: D3.js
 - **Programming Language**: Java (for algorithm implementations)
 - **Other**: Python (for dynamic visualizations)
+
+## Usage
+
+After setting up the application, you can access the Visual Algorithm Explorer at `http://localhost:3000`. Navigate through the platform to visualize various algorithms and data structures. Select an algorithm from the menu to see a step-by-step visualization and interact with it to enhance your understanding.
+
+## Live Demo
+
+You can view the live demo of the Visual Algorithm Explorer at [DSA Visualizer Live Demo](https://dsa-visualizer-m562.onrender.com).
 
 ## Usage
 
